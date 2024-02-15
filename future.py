@@ -31,7 +31,9 @@ class Vault(Interface):
             print("Wrong Hallway! You Have Been Spotted!")
             
     def navigate_vents(self):
-
+        print("You have finally made it! After sneaking into one of the premiere \
+secure facilities in this solar system, you find yourself within a maze of vents.")
+        print("You must follow the instructions you bought with the last of your money EXACTLY.")
         while not self.at_vault:
             direction = 0
             direction = int(input("Which Direction? "))
@@ -46,9 +48,10 @@ class Vault(Interface):
             else:
                 break
         
-
     def future_vault(self):
-        print("ghsaigsar")
+        print("You see the vault door before you. You feel the slight shake of excitement as you pull out your interface in order to pull out the passkey")
+
+
 
 vault = Vault()
 
