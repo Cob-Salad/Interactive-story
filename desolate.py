@@ -7,15 +7,16 @@ from fractions import Fraction
 class Desolate: #(Main)
 
     def __init__(self):
-        self.inventory = []
+        self.inventory = {}
         self.remote_battery = 4.0
         self.water = 0
         self.stored_state = []
-    
+#CAN BE MOVED TO INTERFACE    
     def add_to_inventory(self, item):
-        self.inventory.append(item)
+        self.inventory["name"] = "description"
         print(f"You added {item.__class__.__name__} to your inventory. ")
 
+#CAN BE MOVED TO INTERFACE
     def check_inventory(self):
         print()
         print(f"""Your inventory is currently:
@@ -24,14 +25,15 @@ Battery: {Fraction(self.remote_battery/8)},
 Water: {self.water}""")
         print()
 
+#CAN BE MOVED TO INTERFACE
     def current_method(self):
         self.stored_state.append()
-        
+#CAN BE MOVED TO INTERFACE        
     def previous_method(self):
         previous_method = self.stored_state.pop()
         previous_method()
         
-
+#CAN BE MOVED TO INTERFACE
     def options(self):
         while True:
             print()
@@ -64,8 +66,8 @@ Continue walking to the charging port (2)
         elif choice  == "2":
             self.keep_walking()
         elif choice == "3":
-            self.options()
             self.stored_state.append(self.lonely)
+            self.options()
         else:
             self.wrong_choice()
     
