@@ -11,6 +11,7 @@ class Desolate: #(Main)
         self.remote_battery = 4.0
         self.water = 0
         self.stored_state = []
+        
 #CAN BE MOVED TO INTERFACE    
     def add_to_inventory(self, item):
         self.inventory["name"] = "description"
