@@ -1,80 +1,23 @@
 from abc import ABC, abstractmethod
 from fractions import Fraction
-
-#from main import Main
-
-           
-class Desolate: #(Main)
-
-    def __init__(self):
-        self.inventory = {}
-        self.remote_battery = 4.0
-        self.water = 0
-        self.stored_state = []
-        
-#CAN BE MOVED TO INTERFACE    
-    def add_to_inventory(self, item):
-        self.inventory["name"] = "description"
-        print(f"You added {item.__class__.__name__} to your inventory. ")
-
-#CAN BE MOVED TO INTERFACE
-    def check_inventory(self):
-        print()
-        print(f"""Your inventory is currently:
-Inventory: {self.inventory},
-Battery: {Fraction(self.remote_battery/8)},
-Water: {self.water}""")
-        print()
-
-#CAN BE MOVED TO INTERFACE
-    def current_method(self):
-        self.stored_state.append()
-#CAN BE MOVED TO INTERFACE        
-    def previous_method(self):
-        previous_method = self.stored_state.pop()
-        previous_method()
-        
-#CAN BE MOVED TO INTERFACE
-    def options(self):
-        while True:
-            print()
-            print("Options: ")
-            print("1. Check Inventory ")
-            print("2. Continue Journey ")
-            print("3. Quit ")
-            print()
-
-            choice = input("Enter your choice: ").lower()
-
-            if choice == "1":
-                self.check_inventory()
-            elif choice == "2":
-                self.previous_method()
-            elif choice == "3":
-                print("Well... it is your loss. ")
-                break
-            else:
-                print("Invalid Entry")
+from interface import Interface
 
 
+class Desolate(Interface):
+  
     def lonely(self):
-        choice  = input("""Do you want to make camp for the night (1) 
-Continue walking to the charging port (2)
-                """)
+        choices  = ["Do you want to make camp for the night?", "Continue walking to the charging port?"]
         print()
+        choice = self.display_options(choices)
         if choice == "1":
             self.make_camp()
         elif choice  == "2":
             self.keep_walking()
-        elif choice == "3":
-            self.stored_state.append(self.lonely)
-            self.options()
         else:
             self.wrong_choice()
     
     
     def make_camp(self):
-
         print("""You have decided to make camp. 
 You pull the boat hull over to the tree to make a shelter for the night.
 You lean the boat against the tree to help provide a wind break and shelter from any potential rain.""")
@@ -100,7 +43,7 @@ hopefully make it to another place that it will be easier to survive in.
             self.survival()
         elif choice == "3":
             self.stored_state.append(self.make_camp)
-            self.options()
+            self.display_options()
         else:
             self.wrong_choice()
 
@@ -145,7 +88,7 @@ Checkout your inventory (3)?
         elif choice == "2":
             self.previous_method()
         elif choice == "3":
-            self.options()
+            self.display_options()
         else:
             self.wrong_choice()
 
@@ -154,6 +97,8 @@ def main():
         
         desolate = Desolate()
         print()
+        #MAKE py file choices ={ desolate1}
+        #call desolate1
         print("""You have arrived to a desolate wasteland.
 You must find ways to survive in this land of nothing.
 Each time you arrive to a new destination you must find a charging port.

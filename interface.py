@@ -1,40 +1,50 @@
+from fractions import Fraction
+import sys
+
 class Interface():
 
-    def __innit__(self, ):
-        pass
+    def __init__(self):
+        self.inventory = []
+        self.remote_battery = 4.0
+        self.water = 0
+        self.stored_state = []
+  
+    def add_to_inventory(self, item):
+        self.inventory.append(item)
+        print(f"You added {item.__class__.__name__} to your inventory. ")
 
+    def check_inventory(self):
+        print()
+        print(f"""Your inventory is currently:
+Inventory: {self.inventory},
+Battery: {Fraction(self.remote_battery/8)},
+Water: {self.water}""")
+        print()
 
-    def choice(self, choice1: str, choice2: str, choice3: str, choice4: str, choice5: str):
-        list_choices = []
-        list_choices.insert(0, "1. Interface")
-        list_choices.append(choice1)
-        list_choices.append(choice2)
-        list_choices.append(choice3)
-        list_choices.append(choice4)
-        list_choices.append(choice5)
-        option_picked = int(input("Input your choice: "))
-        option_picked -= 1
+    def current_method(self):
+        self.stored_state.append()
+     
+    def previous_method(self):
+        previous_method = self.stored_state.pop()
+        previous_method()
+        
+    def display_options(self, list_options: list):
+        list_options += ["Check Inventory", "Quit"]
+        while True:
+            print()
+            print("Options: ")
+            for i in range(len(list_options)):
+                print(f"{i+1}. {list_options[i]}")
+            print()
+            choice = input("Enter your choice: ").lower()
+            if choice == str(len(list_options) - 1):
+                self.check_inventory()
+                continue
+            elif choice ==  str(len(list_options)):
+                print("Well... it is your loss. ")
+                sys.exit(0)
+            return choice
 
-
-        if option_picked == 0:
-            print("WELCOME TO YOUR INTERFACE")
-        elif option_picked == 1:
-            list_choices.append(choice1)
-        elif option_picked == 2:
-            list_choices.append(choice2)
-        elif option_picked == 3:
-            list_choices.append(choice3)
-        elif option_picked == 4:
-            list_choices.append(choice4)
-        elif option_picked == 5:
-            list_choices.append(choice5)
-
-
-    def battery_level():
-        pass
-
-    def inventory():
-        pass
 
     def map():
         print("You project a holographic \
