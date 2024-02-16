@@ -1,6 +1,7 @@
 from fractions import Fraction
 import sys
 
+
 class Interface():
 
     def __init__(self):
@@ -33,7 +34,7 @@ Water: {self.water}""")
                 self.check_inventory()
                 continue
             elif choice ==  str(len(list_options)):
-                print("Well... it is your loss. ")
+                print("Well... it's your loss. ")
                 sys.exit(0)
             return choice
 
@@ -45,3 +46,4 @@ Water: {self.water}""")
         print("From the beginning \
     of the maze of vents you need to go \
     Left, Right, Right, Left, Straight")
+        
