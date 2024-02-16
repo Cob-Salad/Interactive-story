@@ -7,7 +7,6 @@ class Interface():
         self.inventory = []
         self.remote_battery = 4.0
         self.water = 0
-        self.stored_state = []
   
     def add_to_inventory(self, item):
         self.inventory.append(item)
@@ -20,13 +19,6 @@ Inventory: {self.inventory},
 Battery: {Fraction(self.remote_battery/8)},
 Water: {self.water}""")
         print()
-
-    def current_method(self):
-        self.stored_state.append()
-     
-    def previous_method(self):
-        previous_method = self.stored_state.pop()
-        previous_method()
         
     def display_options(self, list_options: list):
         list_options += ["Check Inventory", "Quit"]
