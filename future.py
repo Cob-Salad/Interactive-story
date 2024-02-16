@@ -34,6 +34,7 @@ class Vault(Interface):
         print("You have finally made it! After sneaking into one of the premiere \
 secure facilities in this solar system, you find yourself within a maze of vents.")
         print("You must follow the instructions you bought with the last of your money EXACTLY.")
+        print("Type ")
         while not self.at_vault:
             direction = 0
             direction = int(input("Which Direction? "))
@@ -49,8 +50,17 @@ secure facilities in this solar system, you find yourself within a maze of vents
                 break
         
     def future_vault(self):
-        print("You see the vault door before you. You feel the slight shake of excitement as you pull out your interface in order to pull out the passkey")
-
+        print("You see the vault door before you. You feel the slight\
+ shake of excitement as you pull out your interface in order to pull out the passkey")
+        open_vault = input(print("Pull out the passkey? (y/n) "))
+        if open_vault == "y":
+            self.enter_vault()
+        else:
+            sure = input(print("Are you sure? (y/n) "))
+            if sure == "y":
+                print("Oh no! The periodic security scan hit you! You better get running!")
+            else:
+                self.future_vault()
 
 
 vault = Vault()
