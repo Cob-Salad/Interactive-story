@@ -18,7 +18,7 @@ Dimension hopping **Future.py** *Colby
     * Comes with a GPS function that can point you in the right direction to recharge the remote
     * Makes it to charging facility
     
-    Cowboy Era *Dove
+    Cowboy Era
     * Comes into the era during a shoot out in a saloon
     * Appear behind the counter of saloon 
             * (Make a decision: steal a poncho for a guy passed out or jump out saying don't shoot me)
