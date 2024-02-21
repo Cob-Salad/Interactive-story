@@ -1,47 +1,25 @@
+from interface import Interface
 from future import Vault
-from desolate import desolate
-
-class Interface():
-
-    def __innit__(self, ):
-        pass
+from desolate import Desolate
+from cowboy import Cowboy
+#from wizard import
 
 
-    def choice(self, choice1: str):
-        list_choices = []
-        list_choices.insert(0, "1. Interface")
-        option_picked = int(input("Input your choice: "))
-        option_picked -= 1
+class Main(Interface):
 
-        if option_picked == 0:
-            print("WELCOME TO YOUR INTERFACE")
-        elif option_picked == 1:
-            print(choice1)
-        elif option_picked == 2:
-            pass
-        elif option_picked == 3:
-            pass
-        elif option_picked == 4:
-            pass
+    def __init__(self):
+        self.vault = Vault()
+        self.desolate = Desolate()
+        self.cowboy = Cowboy()
+        #Add wizard
+               
+    def run(self):
+        self.vault.navigate_vents()      
+        self.desolate.arrived()
+        self.cowboy.story()
+        #Add Wizard.py
+       
 
-    def battery_level():
-        pass
-
-    def inventory():
-        pass
-
-    def map():
-        print("You project a holographic \
-    map of the vent sytem of the \
-    compound surrounding the vault")
-        print("From the beginning \
-    of the maze of vents you need to go \
-    Left, Right, Right, Left, Straight")
-        
-    
-   
-Vault.turn_left()
-
-map()
-    
-desolate()
+if __name__ == "__main__":
+    main = Main()
+    main.run()

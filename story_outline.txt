@@ -1,6 +1,6 @@
 You are the Player/Robber
 
-Dimension hopping
+Dimension hopping **Future.py** *Colby
     * Starts in th future
     * Starts out crawling through vents and lasers
     * Breaks into a vault 
@@ -9,12 +9,12 @@ Dimension hopping
     * Quickly presses buttons to get out of the vault
     * Don't know how to use the remote. Does a full send to get out of getting caught
     
-    Desolate Era
+    Desolate Era *Dove
     * Finds themselves in a desolate era. Very little is surviving. Has to fight for their life the survive. 
     * Comes with a GPS function that can point you in the right direction to recharge the remote
     * Makes it to charging facility
     
-    Cowboy Era
+    Cowboy Era *Dove
     * Comes into the era during a shoot out in a saloon
     * Appear behind the counter of saloon 
             * (Make a decision: steal a poncho for a guy passed out or jump out saying don't shoot me)
@@ -23,7 +23,7 @@ Dimension hopping
             * Enlist the help of bandits in the saloon to break into the bank
     * Charge remote
 
-    Wizard Era
+    Wizard Era *Colby
     * Arrive in a summoning circle in castle tower
     * Everyone thinks they have summoned a demon
             * (Make a decision: Will you walk out of the summoning circle or stay in the circle?)
@@ -31,6 +31,6 @@ Dimension hopping
     
     * Plot twist you arrived in the circle when the demon arrived so the demon possessed you
 
-    WindDown
-    * Starts to understand the remote and can choose where they want to go
-    * Chose to continue adventure or Goes back to house in original world 
+
+
+    WindDown Main & Interface  *Dove

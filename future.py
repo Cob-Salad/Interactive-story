@@ -37,7 +37,14 @@ class Vault(Interface):
         print("You have finally made it! After sneaking into one of the premiere \
 secure facilities in this solar system, you find yourself within a maze of vents.")
         print("You must follow the map you bought EXACTLY.")
-        Interface.map()
+        print()
+        print("You project a holographic \
+map of the vent sytem of the \
+compound surrounding the vault")
+        print("From the beginning \
+of the maze of vents you need to go \
+Left, Right, Right, Left, Straight")
+        print()
         print("Current options: ")
         print("1. Left Turn, 2. Right Turn, 3. Go Straight, 4. Leave Vents, 5. Back to Start")
         while not self.at_vault:
@@ -120,11 +127,5 @@ of teleportation function, maybe it can get you out of here?")
             print("Oh no! The periodic security scan hit you! You better get moving!")
 
 
-def main():
-
-    vault = Vault()
-
-    vault.navigate_vents()
-
-    
-main()
+vault = Vault()
+vault.navigate_vents()
