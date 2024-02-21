@@ -62,11 +62,11 @@ secure facilities in this solar system, you find yourself within a maze of vents
     def future_vault(self):
         print("You see the vault door before you. You feel the slight\
  shake of excitement as you behold the surprisingly old and simple keyhole.")
-        open_vault = input(print("Use the lockpicking function of your interface? (y/n): "))
+        open_vault = input("Use the lockpicking function of your interface? (y/n): ")
         if open_vault == "y":
             self.enter_vault()
         else:
-            sure = input(print("Are you sure you want to turn back now? (y/n) "))
+            sure = input("Are you sure you want to turn back now? (y/n) ")
             if sure == "y":
                 print("Oh no! The periodic security scan hit you! You better get running!")
             else:
@@ -79,7 +79,7 @@ of small robotic arms shoot out and almost instantly you hear the click of succe
         print("The large vault door slowly swings open to reveal a \
 pedestal with a seemingly ordinary, if vintage, remote.")
         remote = " "
-        remote = str(input(print("Proceed and pickup the remote? (y/n): ")))
+        remote = str(input("Proceed and pickup the remote? (y/n): "))
         if remote == "y":
             print(".")
             time.sleep(1)
@@ -104,30 +104,27 @@ lights turn to a menacing red.")
 of teleportation function, maybe it can get you out of here?")
             print("There are so many buttons on the remote!")
             button = ""
-            button = input(print("Which one do you press? (blue/yellow/green/red)"))
+            button = input("Which one do you press? (blue/yellow/green/red)")
             if button == "blue" or button == "yellow" or button == "green" or button == "red":
                 print("The remote begins humming louder and louder.")
                 time.sleep(3)
                 print("Maybe this wasn't such a good idea...")
+                #transport to next phase goes here
             else:
                 print("The remote begins humming louder and louder.")
                 time.sleep(3)
-                print("Maybe this wasn't such a good idea...") 
+                print("Maybe this wasn't such a good idea...")
+                #transport to next phase goes here 
                 
         else:
             print("Oh no! The periodic security scan hit you! You better get moving!")
 
 
-       
+def main():
 
+    vault = Vault()
 
-
-
-
-vault = Vault()
-
-vault.enter_vault()
-#vault.navigate_vents()
+    vault.navigate_vents()
 
     
-
+main()
