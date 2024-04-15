@@ -2,16 +2,16 @@
 
 ## Player
 
-**Future**
+**Future** -- Colby
 
  * imports from interface.py
 
-**Desolate**
+**Desolate** -- Dove
 
  * imports from interface.py
  * imports from desolate_decisions
 
-**Cowboy**
+**Cowboy** -- Dove
  * imports from interface.py
  * imports from cowboy_decisions.py
 
